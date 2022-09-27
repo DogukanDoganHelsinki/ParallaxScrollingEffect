@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>D's Countries</title>
+  </head>
+  <body>
+    <section class="zoom">
+      <img src="img/mountain1.png" alt="mountain1" id="layer1" />
+      <img src="img/mountain2.png" alt="mountain2" id="layer2" />
+      <img src="img/text.png" alt="text" id="layer3" />
+    </section>
+    <section class="content">
+      <h2>This is where your new journey starts</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In esse
+        blanditiis voluptate tenetur optio iste voluptates quam molestiae nihil,
+        tempora, libero quibusdam laudantium dolores at, dolorum neque
+        recusandae corrupti! Ipsa eaque aliquam reiciendis, enim ratione quasi
+        culpa doloribus itaque fugiat ex veniam optio rem commodi! Nisi earum id
+        quibusdam qui accusamus natus, doloremque aperiam unde minus vero.
+        Pariatur, molestiae sequi. Eveniet distinctio odio qui delectus at
+        sapiente nesciunt id maiores minus tenetur, fugiat natus necessitatibus
+        unde quas aliquid soluta repellendus nihil quod aspernatur ipsum
+        laudantium labore, sit vero! Quas accusamus illo quo corporis sint
+        possimus iure maiores nam architecto, veritatis fugit quidem facilis
+        fugiat recusandae ad accusantium sunt obcaecati praesentium ducimus!
+        Eveniet voluptatum nobis quaerat corporis obcaecati a natus laboriosam,
+        sequi dolores labore veritatis fugit, ipsa incidunt suscipit. Tempora
+        quisquam ullam nemo minima dolore facilis quidem fugiat hic pariatur,
+        doloremque expedita, ab id iste modi molestias non neque minus
+        praesentium?
+      </p>
+    </section>
+    <script>
+      const layer1 = document.getElementById("layer1");
+      scroll = window.pageYOffset;
+      document.addEventListener("scroll", function (e) {
+        const offset = window.pageYOffset;
+        scroll = offset;
+        layer1.style.width = 100 + scroll / 3 + "%";
+      });
+
+      const layer2 = document.getElementById("layer2");
+      document.addEventListener("scroll", function (e) {
+        layer2.style.width = 100 + scroll / 5 + "%";
+        layer2.style.left = scroll / 50 + "%";
+      });
+
+      const layer3 = document.getElementById("layer3");
+      document.addEventListener("scroll", function (e) {
+        layer3.style.top = -scroll / 20 + "%";
+      });
+    </script>
+  </body>
+</html>
